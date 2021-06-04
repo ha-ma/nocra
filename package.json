@@ -6,6 +6,7 @@
   "scripts": {
     "build:dev": "webpack --mode='development'",
     "build:prod": "webpack --mode='production'",
+    "build:azure": "webpack --mode='production'",
     "dev": "webpack-dev-server"
   },
   "keywords": [],
