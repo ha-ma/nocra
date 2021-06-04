@@ -5,7 +5,7 @@ function ContractDetail(props) {
   const { contractDetail } = props;
 
   // ローカルステートを用意
-  const [contractDetailTitle, setContractDetailTitle] = useState("");
+  const [contractDetailTitle, setContractDetailTitle] = useState(contractDetail.title);
 
   // Storeに変化があった場合にコンポーネントのstateをアップデートする
   useEffect(() => {
@@ -13,9 +13,13 @@ function ContractDetail(props) {
   }, [contractDetail]);
   return (
     <div>
+      <h1>
+        <li>API_URL: {process.env.API_URL}</li>
+      </h1>
       <ul>
         <li>userId: {contractDetail.userId}</li>
         <li>id: {contractDetail.id}</li>
+
         <li>
           title:
           {/* valueにはコンポーネントステートを渡す。onChangeでコンポーネントステートのアップデート */}
